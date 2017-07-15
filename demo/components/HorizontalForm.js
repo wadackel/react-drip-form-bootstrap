@@ -21,9 +21,6 @@ const HorizontalForm = ({ handlers }) => (
       labelText="Text"
       labelColProps={{ sm: 2 }}
       controlColProps={{ sm: 10 }}
-      validations={{
-        required: true,
-      }}
     />
 
     <HorizontalInput
@@ -34,9 +31,6 @@ const HorizontalForm = ({ handlers }) => (
       controlColProps={{ sm: 10 }}
       addonBefore={<InputGroup.Addon>Before</InputGroup.Addon>}
       addonAfter={<InputGroup.Addon>After</InputGroup.Addon>}
-      validations={{
-        required: true,
-      }}
     />
 
     <HorizontalSelect
@@ -45,9 +39,6 @@ const HorizontalForm = ({ handlers }) => (
       labelText="Select"
       labelColProps={{ sm: 2 }}
       controlColProps={{ sm: 10 }}
-      validations={{
-        required: true,
-      }}
     >
       <option value="">Select option</option>
       <option value="option1">Option 1</option>
@@ -63,9 +54,6 @@ const HorizontalForm = ({ handlers }) => (
       controlColProps={{ sm: 10 }}
       addonBefore={<InputGroup.Addon>Before</InputGroup.Addon>}
       addonAfter={<InputGroup.Button><Button>After</Button></InputGroup.Button>}
-      validations={{
-        required: true,
-      }}
     >
       <option value="">Select option</option>
       <option value="option1">Option 1</option>
@@ -80,9 +68,6 @@ const HorizontalForm = ({ handlers }) => (
       labelText="Select (multiple)"
       labelColProps={{ sm: 2 }}
       controlColProps={{ sm: 10 }}
-      validations={{
-        required: true,
-      }}
     >
       <option value="option1">Option 1</option>
       <option value="option2">Option 2</option>
@@ -95,9 +80,6 @@ const HorizontalForm = ({ handlers }) => (
       labelText="Textarea"
       labelColProps={{ sm: 2 }}
       controlColProps={{ sm: 10 }}
-      validations={{
-        required: true,
-      }}
     />
 
     <HorizontalTextarea
@@ -108,9 +90,6 @@ const HorizontalForm = ({ handlers }) => (
       controlColProps={{ sm: 10 }}
       addonBefore={<InputGroup.Addon>Before</InputGroup.Addon>}
       addonAfter={<InputGroup.Addon>After</InputGroup.Addon>}
-      validations={{
-        required: true,
-      }}
     />
 
     <FormGroup>
@@ -122,9 +101,6 @@ const HorizontalForm = ({ handlers }) => (
           name="checkbox"
           label="Checkbox"
           value="yes"
-          validations={{
-            required: true,
-          }}
         >
           Checkbox
         </Checkbox>
@@ -140,10 +116,6 @@ const HorizontalForm = ({ handlers }) => (
           multiple
           name="checkboxGroup"
           label="Checkbox Group"
-          validations={{
-            required: true,
-            max: 2,
-          }}
         >
           <Checkbox value="checkbox1">Checkbox 1</Checkbox>
           <Checkbox value="checkbox2">Checkbox 2</Checkbox>
@@ -156,9 +128,6 @@ const HorizontalForm = ({ handlers }) => (
           multiple
           name="checkboxGroupInline"
           label="Checkbox Group Inline"
-          validations={{
-            required: true,
-          }}
         >
           <Checkbox inline value="inline1">Inline 1</Checkbox>
           <Checkbox inline value="inline2">Inline 2</Checkbox>
@@ -175,9 +144,6 @@ const HorizontalForm = ({ handlers }) => (
         <FieldGroup
           name="radioGroup"
           label="Radio Group"
-          validations={{
-            required: true,
-          }}
         >
           <Radio value="radio1">Radio 1</Radio>
           <Radio value="radio2">Radio 2</Radio>
@@ -186,9 +152,6 @@ const HorizontalForm = ({ handlers }) => (
         <FieldGroup
           name="radioGroupInline"
           label="Radio Group Inline"
-          validations={{
-            required: true,
-          }}
         >
           <Radio inline value="radio1">Radio 1</Radio>
           <Radio inline value="radio2">Radio 2</Radio>
@@ -209,4 +172,18 @@ HorizontalForm.propTypes = FormPropTypes;
 
 
 export default dripForm({
+  validations: {
+    text: { required: true },
+    textWithAddon: { required: true },
+    select: { required: true },
+    selectWithAddon: { required: true },
+    selectMultiple: { required: true },
+    textarea: { required: true },
+    textareaWithAddon: { required: true },
+    checkbox: { required: true },
+    checkboxGroup: { required: true },
+    checkboxGroupInline: { required: true },
+    radioGroup: { required: true },
+    radioGroupInline: { required: true },
+  },
 })(HorizontalForm);

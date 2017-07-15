@@ -11,26 +11,18 @@ const InlineWithAddonForm = ({ handlers }) => (
     <InlineInput
       type="text"
       name="text"
-      label="Text"
       labelText="Text"
       placeholder="Basic text field"
       addonBefore={<InputGroup.Addon>@</InputGroup.Addon>}
       addonAfter={<InputGroup.Button><Button>Button</Button></InputGroup.Button>}
-      validations={{
-        required: true,
-      }}
     />
 
     {' '}
 
     <InlineSelect
       name="select"
-      label="Select"
       labelText="Select"
       addonBefore={<InputGroup.Addon>Before</InputGroup.Addon>}
-      validations={{
-        required: true,
-      }}
     >
       <option value="">Select option</option>
       <option value="option1">Option 1</option>
@@ -48,4 +40,8 @@ InlineWithAddonForm.propTypes = FormPropTypes;
 
 
 export default dripForm({
+  validations: {
+    text: { required: true },
+    select: { required: true },
+  },
 })(InlineWithAddonForm);

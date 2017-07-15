@@ -13,9 +13,6 @@ const InlineBasicForm = ({ handlers }) => (
       name="text"
       labelText="Text"
       placeholder="Basic text field"
-      validations={{
-        required: true,
-      }}
     />
 
     {' '}
@@ -23,9 +20,6 @@ const InlineBasicForm = ({ handlers }) => (
     <InlineSelect
       name="select"
       labelText="Select"
-      validations={{
-        required: true,
-      }}
     >
       <option value="">Select option</option>
       <option value="option1">Option 1</option>
@@ -40,10 +34,6 @@ const InlineBasicForm = ({ handlers }) => (
       name="checkbox"
       label="Checkbox"
       value="yes"
-      validations={{
-        required: true,
-        truthy: true,
-      }}
     >
       Checkbox
     </Checkbox>
@@ -58,4 +48,9 @@ InlineBasicForm.propTypes = FormPropTypes;
 
 
 export default dripForm({
+  validations: {
+    text: { required: true },
+    select: { required: true },
+    checkbox: { required: true, truthy: true },
+  },
 })(InlineBasicForm);
