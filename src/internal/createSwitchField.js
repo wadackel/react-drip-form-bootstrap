@@ -5,7 +5,7 @@ import defaultGetValidationState from './getValidationState';
 
 
 const createSwitchControl = (WrappedComponent) => {
-  const Control = (props) => {
+  const SwitchField = (props) => {
     const {
       input,
       meta,
@@ -46,9 +46,10 @@ const createSwitchControl = (WrappedComponent) => {
     );
   };
 
-  Control.propTypes = FieldPropTypes;
+  SwitchField.displayName = `SwitchField(${WrappedComponent.name})`;
+  SwitchField.propTypes = FieldPropTypes;
 
-  return Control;
+  return SwitchField;
 };
 
 
