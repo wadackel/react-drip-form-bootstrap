@@ -1,6 +1,6 @@
 {
   "name": "react-drip-form-bootstrap",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1",
   "description": "React Bootstrap component set for react-drip-form.",
   "main": "lib/index.js",
   "scripts": {
@@ -75,14 +75,14 @@
     "prismjs": "^1.6.0",
     "react": "^15.6.1",
     "react-addons-test-utils": "^15.6.0",
-    "react-bootstrap": "^0.31.0",
+    "react-bootstrap": "^0.31.1",
     "react-dom": "^15.6.1",
-    "react-drip-form": "^0.0.1-alpha.7",
+    "react-drip-form": "^0.0.1",
     "react-hot-loader": "next",
     "react-prism": "^4.3.0",
     "react-test-renderer": "^15.6.1",
     "style-loader": "^0.18.2",
-    "webpack": "^3.2.0",
+    "webpack": "^3.3.0",
     "webpack-dev-server": "^2.5.0"
   },
   "dependencies": {
